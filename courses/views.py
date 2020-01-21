@@ -11,8 +11,6 @@ class CourseView(viewsets.ModelViewSet):
     @action(detail=False, methods=['post'])
     def create_courses(self, request):
         data = request.data
-        print(data)
-    
         serializer = CourseSerializer(data=request.data)
         
         if serializer.is_valid():
@@ -23,7 +21,7 @@ class CourseView(viewsets.ModelViewSet):
     
     @action(detail=True, methods=["post"])
     def update_course(self, request):
-        print("update course")
+        
         pass
     
 class AutresViews(viewsets.ModelViewSet):
