@@ -17,6 +17,8 @@ from django.conf.urls import url,include
 from django.contrib import admin
 from courses import views
 from rest_framework import routers
+from rest_framework_swagger.views import get_swagger_view
+schema_view = get_swagger_view(title='Pastebin API')
 
 router = routers.DefaultRouter()
 router.register(r'course', views.CourseView, basename="Course")
@@ -24,4 +26,5 @@ router.register(r'autres', views.AutresViews,basename="AutresViews")
 
 urlpatterns = [
     url(r'^', include(router.urls)),
+    url(r'^doc/$', schema_view)
 ]
