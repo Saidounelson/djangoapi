@@ -21,17 +21,8 @@ class CourseView(viewsets.ModelViewSet):
     
     @action(detail=True, methods=["post"])
     def update_course(self, request):
-        
         pass
     
-class AutresViews(viewsets.ModelViewSet):
-    queryset = Course.objects.all()
-    serializer_class = CourseSerializer
-    
-    @action(detail=True, methods=['post'])
-    def test(self, request,pk=None):
-        print("test")
-        pass
     
 
     
