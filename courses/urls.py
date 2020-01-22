@@ -22,7 +22,6 @@ schema_view = get_swagger_view(title='Pastebin API')
 
 router = routers.DefaultRouter()
 router.register(r'course', views.CourseView, basename="Course")
-router.register(r'autres', views.AutresViews,basename="AutresViews")
 
 urlpatterns = [
     url(r'^', include(router.urls)),
