@@ -27,3 +27,7 @@ urlpatterns = [
     url(r'^', include(router.urls)),
     url(r'^doc/$', schema_view)
 ]
+
+
+
+change JSONResponse 
